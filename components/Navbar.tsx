@@ -17,12 +17,7 @@ export default function Navbar() {
           <a href="#contact" className="hover:text-gray-900">Contact</a>
 
           {/* DEBUG MARKER */}
-          <span className="rounded-lg px-2 py-1 text-xs text-white"
-            style={{ background: "rgb(var(--accent))" }}
-          >
-            NAVBAR-UPDATED
-          </span>
-
+        
           <a href={`mailto:${portfolio.email}`} className="hover:text-gray-900">
             Email
           </a>
