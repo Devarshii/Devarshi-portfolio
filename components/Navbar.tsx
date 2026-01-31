@@ -1,8 +1,5 @@
 import { portfolio } from "../data/portfolio";
 
-import { portfolio } from "../data/portfolio";
-
-
 export default function Navbar() {
   return (
     <nav
@@ -11,10 +8,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         {/* Left: Name */}
-        <a
-          href="/"
-          className="text-sm font-semibold tracking-tight text-gray-900"
-        >
+        <a href="/" className="text-sm font-semibold tracking-tight text-gray-900">
           {portfolio.name}
         </a>
 
@@ -30,11 +24,7 @@ export default function Navbar() {
             Contact
           </a>
 
-          {/* Email as normal link */}
-          <a
-            href={`mailto:${portfolio.email}`}
-            className="hover:text-gray-900"
-          >
+          <a href={`mailto:${portfolio.email}`} className="hover:text-gray-900">
             Email
           </a>
 
