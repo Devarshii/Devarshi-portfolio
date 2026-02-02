@@ -1,6 +1,9 @@
-import { portfolio } from "../data/portfolio";
+"use client";
 
-export default function Hero() {
+import { portfolio } from "../data/portfolio";
+import Reveal from "./Reveal_temp";
+export default function Hero() 
+{
   return (
     <section className="relative py-16">
       {/* soft background blobs */}
@@ -13,43 +16,61 @@ export default function Hero() {
         style={{ background: "rgba(var(--accent-soft), 0.40)" }}
       />
 
-      <p className="text-sm text-gray-500">{portfolio.location}</p>
+      <Reveal>
+        <p className="text-sm text-gray-500">{portfolio.location}</p>
+      </Reveal>
 
-      <h1 className="mt-3 text-5xl font-semibold tracking-tight text-gray-900">
-        {portfolio.name}
-      </h1>
+      <Reveal delay={0.05}>
+        <h1 className="mt-3 text-5xl font-semibold tracking-tight text-gray-900">
+          {portfolio.name}
+        </h1>
+      </Reveal>
 
-      <p className="mt-4 max-w-2xl text-lg text-gray-600">
-        {portfolio.headline}
-      </p>
+      <Reveal delay={0.1}>
+        <p className="mt-4 max-w-2xl text-lg text-gray-600">
+          {portfolio.headline}
+        </p>
+      </Reveal>
 
-      <div className="mt-8 flex flex-wrap gap-4">
-        <a
-          href="#projects"
-          className="rounded-2xl px-5 py-2 text-sm text-white"
-          style={{ background: "rgb(var(--accent))" }}
+      <Reveal delay={0.15}>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <a
+            href="#projects"
+            className="rounded-2xl px-5 py-2 text-sm text-white"
+            style={{ background: "rgb(var(--accent))" }}
+          >
+            View Projects
+          </a>
+
+          <a
+            href="#contact"
+            className="rounded-2xl border bg-white px-5 py-2 text-sm text-gray-700"
+            style={{ borderColor: "rgb(var(--border))" }}
+          >
+            Contact
+          </a>
+
+          <a
+            href="/resume"
+            className="rounded-2xl border bg-white px-5 py-2 text-sm text-gray-700"
+            style={{ borderColor: "rgb(var(--border))" }}
+          >
+            Resume
+          </a>
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.2}>
+        <div
+          className="mt-10 rounded-2xl border p-6"
+          style={{
+            borderColor: "rgb(var(--border))",
+            background: "rgb(var(--card))",
+          }}
         >
-          View Projects
-        </a>
-
-        <a
-          href="#contact"
-          className="rounded-2xl border bg-white px-5 py-2 text-sm text-gray-700"
-          style={{ borderColor: "rgb(var(--border))" }}
-        >
-          Contact
-        </a>
-      </div>
-
-      <div
-        className="mt-10 rounded-2xl border p-6"
-        style={{
-          borderColor: "rgb(var(--border))",
-          background: "rgb(var(--card))",
-        }}
-      >
-        <p className="text-gray-700">{portfolio.about.intro}</p>
-      </div>
+          <p className="text-gray-700">{portfolio.about.intro}</p>
+        </div>
+      </Reveal>
     </section>
   );
 }

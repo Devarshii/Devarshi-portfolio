@@ -12,12 +12,16 @@ export default function Navbar() {
         </a>
 
         <div className="flex items-center gap-6 text-sm text-gray-600">
-          <a href="#about" className="hover:text-gray-900">About</a>
-          <a href="#projects" className="hover:text-gray-900">Projects</a>
-          <a href="#contact" className="hover:text-gray-900">Contact</a>
+          <a href="#about" className="hover:text-gray-900">
+            About
+          </a>
+          <a href="#projects" className="hover:text-gray-900">
+            Projects
+          </a>
+          <a href="#contact" className="hover:text-gray-900">
+            Contact
+          </a>
 
-          {/* DEBUG MARKER */}
-        
           <a href={`mailto:${portfolio.email}`} className="hover:text-gray-900">
             Email
           </a>

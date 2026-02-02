@@ -4,7 +4,6 @@
 
 /* ---------- Global Theme Variables ---------- */
 :root {
-  /* Base colors */
   --bg: 255 255 255;        /* white */
   --fg: 15 23 42;           /* slate-900 */
   --muted: 100 116 139;     /* slate-500 */
@@ -29,12 +28,11 @@ body {
     Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
-/* Make selection look premium */
 ::selection {
   background: rgba(var(--accent), 0.2);
 }
 
-/* ---------- IMPORTANT: Remove default blue/underline look ---------- */
+/* Remove default browser link styling */
 a {
   text-decoration: none;
   color: inherit;
@@ -47,6 +45,15 @@ ul {
 
 li {
   list-style: none;
+}
+
+/* Minor polish */
+a:hover {
+  transition: opacity 150ms ease;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Optional scrollbar */
